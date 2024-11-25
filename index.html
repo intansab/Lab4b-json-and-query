@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Book Details</title>
+</head>
+<body>
+  <h1>Book Details</h1>
+  <script>
+    const books = {
+      "books": [
+        {
+          "title": "The Great Gatsby",
+          "author": "F. Scott Fitzgerald",
+          "publicationYear": 1925,
+          "genres": ["Fiction", "Classics"]
+        },
+        {
+          "title": "To Kill a Mockingbird",
+          "author": "Harper Lee",
+          "publicationYear": 1960,
+          "genres": ["Fiction", "Coming-of-Age"]
+        }
+      ]
+    };
+    console.log("Title of the first book:", books.books[0].title);
+    console.log("Author of the second book:", books.books[1].author);
+
+    const allGenres = books.books.map(book => book.genres).flat();
+    console.log("Genres of all books:", [...new Set(allGenres)]);
+  </script>
+</body>
+</html>
